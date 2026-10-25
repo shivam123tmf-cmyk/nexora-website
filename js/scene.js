@@ -39,8 +39,8 @@ const rim = new THREE.DirectionalLight(0x22d3ee, 1.1);
 rim.position.set(-4, 1.5, -2);
 scene.add(rim);
 
-const fill = new THREE.PointLight(0xc084fc, 28, 18, 2);
-fill.position.set(0, -1.4, 1.2);
+const fill = new THREE.PointLight(0xc084fc, 42, 20, 2);
+fill.position.set(0.6, -1.2, 1.4);
 scene.add(fill);
 
 const hemi = new THREE.HemisphereLight(0x1a1025, 0x050505, 0.55);
@@ -48,6 +48,7 @@ scene.add(hemi);
 
 /* ---------- Core group ---------- */
 const core = new THREE.Group();
+core.position.x = isMobile ? 0 : 1.35;
 scene.add(core);
 
 const knotMat = new THREE.MeshPhysicalMaterial({
@@ -133,6 +134,7 @@ const particles = new THREE.Points(
     sizeAttenuation: true,
   })
 );
+particles.position.x = isMobile ? 0 : 1.35;
 scene.add(particles);
 
 /* Glow pedestal disc */
@@ -172,6 +174,7 @@ const pedMat = new THREE.ShaderMaterial({
 const pedestal = new THREE.Mesh(pedGeo, pedMat);
 pedestal.rotation.x = -Math.PI / 2;
 pedestal.position.y = -1.75;
+pedestal.position.x = isMobile ? 0 : 1.35;
 scene.add(pedestal);
 
 /* Soft floor shadow plane */
@@ -185,6 +188,7 @@ const floor = new THREE.Mesh(
 );
 floor.rotation.x = -Math.PI / 2;
 floor.position.y = -1.76;
+floor.position.x = isMobile ? 0 : 1.35;
 scene.add(floor);
 
 /* ---------- Post: bloom ---------- */
@@ -192,9 +196,9 @@ const composer = new EffectComposer(renderer);
 composer.addPass(new RenderPass(scene, camera));
 const bloom = new UnrealBloomPass(
   new THREE.Vector2(innerWidth, innerHeight),
-  isMobile ? 0.55 : 0.85,
-  0.55,
-  0.78
+  isMobile ? 0.7 : 1.15,
+  0.4,
+  0.72
 );
 composer.addPass(bloom);
 composer.addPass(new OutputPass());
@@ -206,7 +210,7 @@ export const scrollState = {
 };
 
 const chapterLooks = [
-  { rotY: 0.15, rotX: 0.1, scale: 1.0, camZ: 6.2, camY: 0.15, hue: 0xa855f7, bloom: 0.85, exp: 1.05 },
+  { rotY: 0.15, rotX: 0.1, scale: 1.05, camZ: 5.9, camY: 0.1, hue: 0xa855f7, bloom: 1.15, exp: 1.12 },
   { rotY: 1.2, rotX: 0.35, scale: 1.18, camZ: 5.1, camY: 0.05, hue: 0xc084fc, bloom: 1.0, exp: 1.12 },
   { rotY: 2.4, rotX: -0.2, scale: 1.35, camZ: 4.4, camY: -0.05, hue: 0x22d3ee, bloom: 1.15, exp: 1.18 },
   { rotY: 3.6, rotX: 0.45, scale: 1.12, camZ: 5.4, camY: 0.2, hue: 0xe879f9, bloom: 0.95, exp: 1.08 },
@@ -291,13 +295,13 @@ function tick() {
   camera.position.z = look.camZ;
   camera.position.y = look.camY + pointer.y * -0.12;
   camera.position.x = pointer.x * 0.22;
-  camera.lookAt(0, 0, 0);
+  camera.lookAt(isMobile ? 0 : 1.1, 0, 0);
 
   fill.color.copy(look.hue);
   pedMat.uniforms.uColor.value.copy(look.hue);
   pedMat.uniforms.uTime.value = t;
   pedMat.uniforms.uIntensity.value = 0.75 + look.bloom * 0.35;
-  knotMat.emissive.copy(look.hue).multiplyScalar(0.55);
+  knotMat.emissive.copy(look.hue).multiplyScalar(0.85);
   bloom.strength = isMobile ? look.bloom * 0.7 : look.bloom;
   renderer.toneMappingExposure = look.exp;
 
