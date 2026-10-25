@@ -5,17 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Nexora — AI that works where you work</title>
   <meta name="description" content="Nexora builds practical AI and automation for shops, SMEs, clinics, and coaching centres in India. Outcomes first — not hype.">
-  <meta name="theme-color" content="#0B1220">
+  <meta name="theme-color" content="#05060A">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
-    <div class="container nav">
+    <div class="nav">
       <a class="logo" href="index.html"><span class="logo-mark" aria-hidden="true">N</span> Nexora</a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu">Menu</button>
       <nav id="nav-menu" class="nav-links" aria-label="Primary">
@@ -31,36 +31,76 @@
 
   <main id="main">
     <section class="hero">
-      <div class="container">
-        <span class="eyebrow">Practical AI for Indian businesses</span>
-        <h1>AI that works where you work</h1>
-        <p class="hero-lead">Nexora helps shops, SMEs, clinics, and coaching centres automate real work — WhatsApp ops, documents, follow-ups — without expensive software or empty AI buzzwords.</p>
-        <div class="btn-row">
-          <a class="btn btn-primary" href="contact.html">Book a free consult</a>
-          <a class="btn btn-secondary" href="solutions.html">See what we build</a>
+      <div class="container hero-layout">
+        <div>
+          <span class="eyebrow">Ops automation for Indian SMEs</span>
+          <h1>AI that works where you work</h1>
+          <p class="hero-lead">Nexora designs and ships automation for shops, clinics, coaching centres, and service businesses — WhatsApp ops, documents, follow-ups — without the agency theatre.</p>
+          <div class="btn-row">
+            <a class="btn btn-primary" href="contact.html">Book a free consult</a>
+            <a class="btn btn-secondary" href="solutions.html">View solutions</a>
+          </div>
+          <p class="hero-note">EAST DELHI · BUILDING IN PUBLIC · NO FAKE CLIENT LOGOS</p>
         </div>
-        <p class="hero-note">Based in East Delhi · Serving businesses across India</p>
+        <aside class="panel" aria-label="Example automation panel">
+          <div class="panel-bar">
+            <span class="panel-dot"></span><span class="panel-dot"></span><span class="panel-dot"></span>
+            <span class="panel-title">nexora / workflow · preview</span>
+          </div>
+          <div class="panel-body">
+            <div class="flow-row">
+              <div class="flow-item">
+                <div class="flow-icon">IN</div>
+                <div>
+                  <strong>WhatsApp enquiry</strong>
+                  <span>message · photo · voice note</span>
+                </div>
+                <span class="flow-badge">live</span>
+              </div>
+              <div class="flow-item">
+                <div class="flow-icon">AI</div>
+                <div>
+                  <strong>Parse &amp; route</strong>
+                  <span>intent · fields · owner alert</span>
+                </div>
+                <span class="flow-badge">auto</span>
+              </div>
+              <div class="flow-item">
+                <div class="flow-icon">OUT</div>
+                <div>
+                  <strong>Sheet + reply</strong>
+                  <span>log row · status text · follow-up</span>
+                </div>
+                <span class="flow-badge ok">ready</span>
+              </div>
+            </div>
+            <div class="panel-footer">
+              <span>illustrative flow — not a client metric</span>
+              <span>n8n · sheets · whatsapp</span>
+            </div>
+          </div>
+        </aside>
       </div>
     </section>
 
     <section>
       <div class="container">
-        <p class="section-label">What you get</p>
-        <h2>Three outcomes that matter</h2>
-        <p class="lead">We start from the problem on your floor — not from a model demo. Every engagement aims at something you can measure in a week.</p>
+        <p class="section-label">Outcomes</p>
+        <h2 class="section-head">Three things that actually move</h2>
+        <p class="lead">We start from the problem on your floor — not from a model demo. Every engagement aims at something you can feel in a week.</p>
         <div class="card-grid">
           <article class="card">
-            <div class="card-icon" aria-hidden="true">01</div>
+            <div class="card-icon">01 / CAPTURE</div>
             <h3>Fewer missed enquiries</h3>
             <p>WhatsApp and lead follow-ups that reply when you are busy, so walk-ins and DMs do not go cold overnight.</p>
           </article>
           <article class="card">
-            <div class="card-icon" aria-hidden="true">02</div>
+            <div class="card-icon">02 / STRUCTURE</div>
             <h3>Less typing, cleaner ops</h3>
-            <p>Bills, forms, and photos turned into structured notes or sheets — so your team spends time serving customers, not copying data.</p>
+            <p>Bills, forms, and photos turned into structured notes or sheets — so your team serves customers instead of copying data.</p>
           </article>
           <article class="card">
-            <div class="card-icon" aria-hidden="true">03</div>
+            <div class="card-icon">03 / OWNERSHIP</div>
             <h3>Systems you can run</h3>
             <p>Automations handed over with clear steps. No lock-in theatre — you should know how it works after we leave.</p>
           </article>
@@ -68,10 +108,10 @@
       </div>
     </section>
 
-    <section class="bg-soft border-top border-bottom">
+    <section class="band">
       <div class="container">
-        <p class="section-label">How we work</p>
-        <h2>Discover → Pilot → Automate → Handoff</h2>
+        <p class="section-label">Method</p>
+        <h2 class="section-head">Discover → Pilot → Automate → Handoff</h2>
         <p class="lead">Short pilots before big builds. If it does not save time or money, we stop early.</p>
         <div class="steps">
           <div class="step">
@@ -110,16 +150,15 @@
       </div>
     </section>
   </main>
-
   <footer class="site-footer">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
           <a class="logo" href="index.html"><span class="logo-mark" aria-hidden="true">N</span> Nexora</a>
-          <p>Practical AI and automation for businesses that need results, not slides.</p>
+          <p>Systems that remove busywork — for businesses that live on WhatsApp, walk-ins, and paper.</p>
         </div>
         <div class="footer-col">
-          <h4>Explore</h4>
+          <h4>Product</h4>
           <a href="solutions.html">Solutions</a>
           <a href="industries.html">Industries</a>
           <a href="approach.html">Approach</a>
@@ -133,8 +172,8 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <span>© <span id="y"></span> Nexora. Built by Shivam Solanki.</span>
-        <span>Brand in India · Not a registered company claim</span>
+        <span>© <span id="y"></span> Nexora · Shivam Solanki</span>
+        <span>East Delhi, India · Brand — not a company registration claim</span>
       </div>
     </div>
   </footer>

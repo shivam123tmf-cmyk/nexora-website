@@ -90,7 +90,8 @@ Visit [app.netlify.com/drop](https://app.netlify.com/drop) and drop the `nexora-
 - Accent `#3B82F6`
 - Soft gray `#F4F6F8`
 - Muted `#64748B`
-- Font: Inter / system-ui
+- Font: Instrument Sans + IBM Plex Mono
+- Theme: dark-forward product UI (Linear/Vercel craft)
 
 ## Honesty rules baked into copy
 
