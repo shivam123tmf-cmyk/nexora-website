@@ -4,12 +4,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Contact — Nexora</title>
-  <meta name="description" content="Contact Nexora for a free consult on AI and automation. Email, WhatsApp, or the on-page form — East Delhi, India.">
-  <meta name="theme-color" content="#05060A">
+  <meta name="description" content="Contact Nexora for a free consult on AI automation. Email or WhatsApp — East Delhi, India.">
+  <meta name="theme-color" content="#030712">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -28,82 +28,42 @@
       </nav>
     </div>
   </header>
-
   <main id="main">
-    <header class="page-header">
+    <section class="page-hero">
       <div class="container">
         <p class="section-label">Contact</p>
-        <h1>Tell us one process to fix</h1>
-        <p>No backend required — send via email or WhatsApp. We reply from East Delhi, India.</p>
+        <h1>Tell us one process that hurts</h1>
+        <p class="lead">No pitch deck required. Email, WhatsApp, or the short form below — we reply with a simple first-step suggestion.</p>
       </div>
-    </header>
-
-    <section>
-      <div class="container contact-grid">
-        <div>
-          <div class="notice" role="note">
-            This form opens your email app with a pre-filled message to <strong>shivam123tmf@gmail.com</strong>, or you can send the same details on WhatsApp. No data is stored on this website.
+    </section>
+    <section class="content-block">
+      <div class="container">
+        <div class="contact-grid">
+          <div class="contact-card reveal">
+            <h3>WhatsApp</h3>
+            <p>Fastest for a quick chat about your workflow.</p>
+            <a class="btn btn-primary" href="https://wa.me/919205089044" target="_blank" rel="noopener">Chat on WhatsApp</a>
           </div>
-          <form id="contact-form" class="form" action="mailto:shivam123tmf@gmail.com" method="get" enctype="text/plain">
-            <label>
-              Your name
-              <input type="text" name="name" autocomplete="name" required placeholder="Full name">
-            </label>
-            <label>
-              Email
-              <input type="email" name="email" autocomplete="email" required placeholder="you@business.com">
-            </label>
-            <label>
-              Business / centre name
-              <span class="form-hint">optional</span>
-              <input type="text" name="business" autocomplete="organization" placeholder="Shop, clinic, coaching centre…">
-            </label>
-            <label>
-              What are you interested in?
-              <select name="interest" required>
-                <option value="" disabled selected>Select one</option>
-                <option>WhatsApp / ops automation</option>
-                <option>Document AI</option>
-                <option>Custom workflow</option>
-                <option>General consult</option>
-              </select>
-            </label>
-            <label>
-              Message
-              <textarea name="message" required placeholder="Describe the workflow that wastes the most time…"></textarea>
-            </label>
-            <div class="form-actions">
-              <button class="btn btn-primary" type="submit">Send via email</button>
-              <button class="btn btn-secondary" type="button" id="whatsapp-send">Send via WhatsApp</button>
-            </div>
-          </form>
+          <div class="contact-card reveal reveal-delay-1">
+            <h3>Email</h3>
+            <p>Prefer writing it out? Send details anytime.</p>
+            <a class="btn btn-secondary" href="mailto:shivam123tmf@gmail.com">shivam123tmf@gmail.com</a>
+          </div>
         </div>
 
-        <aside class="contact-card">
-          <h3>Direct channels</h3>
-          <p>Prefer to skip the form? Reach out anytime.</p>
-          <dl class="contact-meta">
-            <div>
-              <dt>Email</dt>
-              <dd><a href="mailto:shivam123tmf@gmail.com">shivam123tmf@gmail.com</a></dd>
-            </div>
-            <div>
-              <dt>Phone / WhatsApp</dt>
-              <dd><a href="https://wa.me/919205089044" target="_blank" rel="noopener">+91 92050 89044</a></dd>
-            </div>
-            <div>
-              <dt>Location</dt>
-              <dd>East Delhi, India</dd>
-            </div>
-            <div>
-              <dt>Future brand inbox</dt>
-              <dd>hello@nexora… (domain not purchased yet)</dd>
-            </div>
-          </dl>
-          <div class="btn-row">
-            <a class="btn btn-primary" href="https://wa.me/919205089044?text=Hi%20Shivam%2C%20I%27d%20like%20to%20talk%20about%20Nexora%20automation." target="_blank" rel="noopener">Open WhatsApp</a>
-          </div>
-        </aside>
+        <form id="contact-form" class="form-stack reveal" style="margin-top:2.5rem">
+          <label>Name
+            <input name="name" type="text" autocomplete="name" required placeholder="Your name">
+          </label>
+          <label>Business
+            <input name="business" type="text" autocomplete="organization" placeholder="Shop / clinic / company">
+          </label>
+          <label>What should we automate?
+            <textarea name="message" required placeholder="One process that wastes time every week…"></textarea>
+          </label>
+          <button class="btn btn-primary" type="submit">Open email draft</button>
+          <p class="form-hint">Opens your email app with a draft to shivam123tmf@gmail.com — nothing is stored on this site. Or message WhatsApp directly.</p>
+        </form>
       </div>
     </section>
   </main>
@@ -112,7 +72,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a class="logo" href="index.html"><span class="logo-mark" aria-hidden="true">N</span> Nexora</a>
-          <p>Systems that remove busywork — for businesses that live on WhatsApp, walk-ins, and paper.</p>
+          <p>AI that works where you work.</p>
         </div>
         <div class="footer-col">
           <h4>Product</h4>
@@ -125,16 +85,15 @@
           <h4>Contact</h4>
           <a href="mailto:shivam123tmf@gmail.com">shivam123tmf@gmail.com</a>
           <a href="tel:+919205089044">+91 92050 89044</a>
-          <a href="contact.html">Contact form</a>
+          <a href="contact.html">Contact page</a>
         </div>
       </div>
       <div class="footer-bottom">
         <span>© <span id="y"></span> Nexora · Shivam Solanki</span>
-        <span>East Delhi, India · Brand — not a company registration claim</span>
+        <span>East Delhi, India</span>
       </div>
     </div>
   </footer>
-  <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
   <script src="js/main.js"></script>
 </body>
 </html>

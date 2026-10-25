@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Our Approach — Nexora</title>
-  <meta name="description" content="Nexora's approach: discover, pilot, automate, handoff. Short pilots before big builds for Indian SMEs.">
-  <meta name="theme-color" content="#05060A">
+  <title>Approach — Nexora</title>
+  <meta name="description" content="How Nexora discovers, pilots, automates, and hands off AI systems for Indian SMEs.">
+  <meta name="theme-color" content="#030712">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -28,56 +28,41 @@
       </nav>
     </div>
   </header>
-
   <main id="main">
-    <header class="page-header">
+    <section class="page-hero">
       <div class="container">
         <p class="section-label">Approach</p>
-        <h1>Prove value before you scale spend</h1>
-        <p>Four steps. One painful workflow at a time. Stop early if the pilot does not help.</p>
+        <h1>Short pilots. Clear handoffs. No theatre.</h1>
+        <p class="lead">We treat automation like an operations project: prove value on one workflow, then decide whether to expand.</p>
       </div>
-    </header>
-
-    <section>
+    </section>
+    <section class="content-block">
       <div class="container">
-        <div class="steps" style="margin-bottom: 2.75rem;">
-          <div class="step">
+        <div class="steps" style="margin-top:0">
+          <div class="step reveal">
             <h3>Discover</h3>
-            <p>30–45 minute call or visit. We map who does what, where data lives (WhatsApp, paper, sheet), and what “done” looks like.</p>
+            <p>Walk the floor or chat log. Pick one painful loop with a measurable outcome — hours, missed leads, or leakage.</p>
           </div>
-          <div class="step">
+          <div class="step reveal reveal-delay-1">
             <h3>Pilot</h3>
-            <p>A narrow build on free or low-cost tools. You try it on real messages or documents within days — not months.</p>
+            <p>Ship a thin working demo in days using free or low-cost tools. You try it before any long commitment.</p>
           </div>
-          <div class="step">
+          <div class="step reveal reveal-delay-2">
             <h3>Automate</h3>
-            <p>Harden the flow: error handling, owner alerts, and the few integrations that actually matter.</p>
+            <p>Harden the path that worked: WhatsApp, sheets, forms, alerts — documented and owned by your team.</p>
           </div>
-          <div class="step">
+          <div class="step reveal reveal-delay-3">
             <h3>Handoff</h3>
-            <p>Written steps, access list, and a short training so your staff can run it without calling us every day.</p>
+            <p>Training, runbooks, and a support window. If it is not understandable, it is not done.</p>
           </div>
         </div>
-
-        <div class="split">
-          <div class="prose">
-            <h2>Tools we prefer early</h2>
-            <p>We favour stacks you can afford and leave: WhatsApp Business, Google Sheets, n8n or similar automation, and mainstream AI APIs only when they clearly beat a simpler rule.</p>
-            <p>We do not train custom models on day one. Most businesses need reliable plumbing first.</p>
-          </div>
-          <div class="card">
-            <div class="card-icon">PRE-FLIGHT</div>
-            <h3>Your checklist before we build</h3>
-            <ul class="card-list">
-              <li>One named workflow (not “do AI for us”)</li>
-              <li>Someone who owns the process daily</li>
-              <li>Willingness to try a 1–2 week pilot</li>
-              <li>Honest data: messy WhatsApp is fine</li>
-            </ul>
-            <div class="btn-row">
-              <a class="btn btn-primary" href="contact.html">Start with discover</a>
-            </div>
-          </div>
+        <ul class="list-check reveal" style="margin-top:2.5rem">
+          <li>We do not invent case studies, client logos, or performance metrics.</li>
+          <li>Pricing for early pilots is an estimate to test — confirmed only after scoping your workflow.</li>
+          <li>Tools stay pocket-friendly: prefer free tiers and open workflows over expensive lock-in.</li>
+        </ul>
+        <div class="btn-row reveal">
+          <a class="btn btn-primary" href="contact.html">Start with a discovery call</a>
         </div>
       </div>
     </section>
@@ -87,7 +72,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a class="logo" href="index.html"><span class="logo-mark" aria-hidden="true">N</span> Nexora</a>
-          <p>Systems that remove busywork — for businesses that live on WhatsApp, walk-ins, and paper.</p>
+          <p>AI that works where you work.</p>
         </div>
         <div class="footer-col">
           <h4>Product</h4>
@@ -100,16 +85,15 @@
           <h4>Contact</h4>
           <a href="mailto:shivam123tmf@gmail.com">shivam123tmf@gmail.com</a>
           <a href="tel:+919205089044">+91 92050 89044</a>
-          <a href="contact.html">Contact form</a>
+          <a href="contact.html">Contact page</a>
         </div>
       </div>
       <div class="footer-bottom">
         <span>© <span id="y"></span> Nexora · Shivam Solanki</span>
-        <span>East Delhi, India · Brand — not a company registration claim</span>
+        <span>East Delhi, India</span>
       </div>
     </div>
   </footer>
-  <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
   <script src="js/main.js"></script>
 </body>
 </html>
