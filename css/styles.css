@@ -3,8 +3,8 @@
   --bg: #050505;
   --bg-soft: #0b0b0d;
   --ink: #f4f4f5;
-  --muted: #8a8a93;
-  --faint: #3f3f46;
+  --muted: #a1a1aa;
+  --faint: #52525b;
   --accent: #c084fc;
   --accent-hot: #e879f9;
   --accent-cool: #22d3ee;
@@ -267,8 +267,8 @@ button { font: inherit; }
 }
 .btn.primary:hover { background: #fff; }
 .btn.ghost {
-  background: rgba(255,255,255,0.03);
-  border-color: var(--line);
+  background: rgba(255,255,255,0.06);
+  border-color: rgba(255,255,255,0.18);
   color: var(--ink);
   backdrop-filter: blur(10px);
 }
