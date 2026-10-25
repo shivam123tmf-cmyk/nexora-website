@@ -1,18 +1,17 @@
-# Nexora website
+# Nexora
 
-Static site for **Nexora** — AI that works where you work.
+Marketing site for Nexora — AI that works where you work.
 
-## Stack
-- Plain HTML / CSS / JS (no build step)
-- Hosted on Vercel (`cleanUrls`)
+Static experience: Three.js + UnrealBloom hero, Lenis smooth scroll, GSAP ScrollTrigger chapters.
 
 ## Local
-Open `index.html` or serve the folder:
+
+Open `index.html` via any static server (ES modules require http):
 
 ```bash
 npx serve .
 ```
 
-## Contact
-- shivam123tmf@gmail.com
-- https://wa.me/919205089044
+## Deploy
+
+Connected to Vercel project `nexora-website`.

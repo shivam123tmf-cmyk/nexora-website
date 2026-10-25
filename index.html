@@ -2,227 +2,123 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Nexora — AI that works where you work</title>
-  <meta name="description" content="Nexora builds practical AI and automation for shops, SMEs, clinics, and coaching centres in India. Outcomes first — not hype.">
-  <meta name="theme-color" content="#030712">
+  <meta name="description" content="Nexora builds practical AI and automation for shops, SMEs, clinics, and distributors in India. Real systems. Measurable outcomes.">
+  <meta name="theme-color" content="#050505">
   <meta property="og:title" content="Nexora — AI that works where you work">
   <meta property="og:description" content="Practical AI and automation for Indian shops and SMEs.">
   <meta property="og:type" content="website">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.css">
   <link rel="stylesheet" href="css/styles.css">
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"
+    }
+  }
+  </script>
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header">
-    <div class="nav">
-      <a class="logo" href="index.html"><span class="logo-mark" aria-hidden="true">N</span> Nexora</a>
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu">Menu</button>
-      <nav id="nav-menu" class="nav-links" aria-label="Primary">
-        <a href="index.html" aria-current="page">Home</a>
-        <a href="solutions.html">Solutions</a>
-        <a href="industries.html">Industries</a>
-        <a href="approach.html">Approach</a>
-        <a href="about.html">About</a>
-        <a class="nav-cta" href="contact.html">Talk to us</a>
-      </nav>
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader-inner">
+      <span class="loader-mark">N</span>
+      <div class="loader-bar"><i id="loader-fill"></i></div>
     </div>
+  </div>
+
+  <canvas id="webgl" aria-hidden="true"></canvas>
+  <div class="vignette" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="Nexora home">
+      <span class="brand-mark">N</span>
+      <span class="brand-name">Nexora</span>
+    </a>
+    <nav class="topnav" aria-label="Primary">
+      <a href="#work">Work</a>
+      <a href="#system">System</a>
+      <a class="pill" href="#talk">Talk</a>
+    </nav>
   </header>
 
-  <main id="main">
-    <!-- HERO -->
-    <section class="hero">
-      <div class="container hero-layout">
-        <div class="hero-copy reveal">
-          <span class="eyebrow">AI systems for Indian SMEs</span>
-          <h1>AI that works<br>where you work</h1>
-          <p class="hero-lead">Nexora designs practical automation for shops, clinics, coaching centres, and distributors — WhatsApp ops, documents, and follow-ups that remove busywork.</p>
-          <div class="btn-row">
-            <a class="btn btn-primary" href="contact.html">Book a free consult</a>
-            <a class="btn btn-secondary" href="#story">See how it works</a>
-          </div>
-          <p class="hero-note">EAST DELHI · BUILDING IN PUBLIC · NO FAKE CLIENT LOGOS</p>
+  <main id="top">
+    <!-- Sticky stage: canvas lives behind; copy scrolls through chapters -->
+    <section class="stage" id="stage">
+      <div class="chapter chapter-hero" data-chapter="0">
+        <p class="eyebrow">AI systems · India</p>
+        <h1 class="display">
+          <span class="line">AI that works</span>
+          <span class="line accent">where you work</span>
+        </h1>
+        <p class="lede">Practical automation for shops, clinics, coaching centres, and distributors — built to save hours, not impress decks.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#talk">Book a consult</a>
+          <a class="btn ghost" href="#work">See the system</a>
         </div>
-        <div class="hero-visual reveal reveal-delay-2" aria-hidden="true">
-          <div class="core-glow"></div>
-          <div class="orbit-ring"></div>
-          <div class="orbit-ring"></div>
-          <div class="orbit-ring"></div>
-          <canvas id="core-canvas" width="480" height="480" aria-label="Abstract AI core animation"></canvas>
-        </div>
+        <p class="micro">East Delhi · Building in public · No fake case studies</p>
+      </div>
+
+      <div class="chapter" id="work" data-chapter="1">
+        <p class="eyebrow">01 — Capture</p>
+        <h2 class="display sm">WhatsApp that<br>never goes cold</h2>
+        <p class="lede">Orders, enquiries, and reminders handled on the channel your customers already use — so leads do not die overnight.</p>
+      </div>
+
+      <div class="chapter" data-chapter="2">
+        <p class="eyebrow">02 — Structure</p>
+        <h2 class="display sm">Bills and photos<br>become data</h2>
+        <p class="lede">Snap a bill or expiry box. We turn mess into matched notes, claims, and sheets your team can act on the same day.</p>
+      </div>
+
+      <div class="chapter" id="system" data-chapter="3">
+        <p class="eyebrow">03 — Operate</p>
+        <h2 class="display sm">Daily pulse<br>on your phone</h2>
+        <p class="lede">Sales summaries, follow-ups due, and leakage alerts — delivered every morning without another dashboard login.</p>
+      </div>
+
+      <div class="chapter chapter-end" data-chapter="4">
+        <p class="eyebrow">Built for operators</p>
+        <h2 class="display sm">Systems shops<br>can afford</h2>
+        <p class="lede">Start with a paid pilot on a real workflow. Expand only when the numbers make sense — for you and for us.</p>
+        <ul class="fit-list">
+          <li>Kirana &amp; pharmacy</li>
+          <li>Distributors</li>
+          <li>Clinics &amp; coaching</li>
+          <li>Local service SMEs</li>
+        </ul>
       </div>
     </section>
 
-    <!-- STORY: outcomes slide in -->
-    <section class="story-section" id="story">
-      <div class="container">
-        <p class="section-label reveal">Outcomes</p>
-        <h2 class="reveal">Three things that actually move</h2>
-        <p class="lead reveal reveal-delay-1">We start from the problem on your floor — not from a model demo. Every engagement aims at something you can feel in a week.</p>
-        <div class="slide-track">
-          <article class="slide-card">
-            <span class="slide-num">01</span>
-            <div>
-              <h3>Fewer missed enquiries</h3>
-              <p>WhatsApp and lead follow-ups that reply when you are busy, so walk-ins and DMs do not go cold overnight.</p>
-            </div>
-          </article>
-          <article class="slide-card">
-            <span class="slide-num">02</span>
-            <div>
-              <h3>Less typing, cleaner ops</h3>
-              <p>Bills, forms, and photos turned into structured notes or sheets — so your team serves customers instead of copying data.</p>
-            </div>
-          </article>
-          <article class="slide-card">
-            <span class="slide-num">03</span>
-            <div>
-              <h3>Systems you can run</h3>
-              <p>Automations handed over with clear steps. No lock-in theatre — you should know how it works after we leave.</p>
-            </div>
-          </article>
+    <section class="talk" id="talk">
+      <div class="talk-inner">
+        <p class="eyebrow">Start here</p>
+        <h2 class="display sm">Tell us the<br>messy workflow</h2>
+        <p class="lede">No pitch deck required. Describe what eats your time — we will reply with a concrete pilot sketch.</p>
+        <div class="talk-actions">
+          <a class="btn primary lg" href="https://wa.me/919205089044?text=Hi%20Nexora%20—%20I%20want%20to%20talk%20about%20automation%20for%20my%20business." target="_blank" rel="noopener">WhatsApp +91 92050 89044</a>
+          <a class="btn ghost lg" href="mailto:shivam123tmf@gmail.com">shivam123tmf@gmail.com</a>
         </div>
-      </div>
-    </section>
-
-    <!-- Sticky pin storytelling -->
-    <section class="story-section band">
-      <div class="container">
-        <p class="section-label reveal">Product story</p>
-        <h2 class="reveal">From message to action — without the mess</h2>
-        <p class="lead reveal reveal-delay-1">Scroll through the flow. Same idea on every engagement: capture → structure → route → close the loop.</p>
-        <div class="story-pin">
-          <div class="story-pin-sticky">
-            <div class="story-pin-visual" aria-hidden="true">
-              <div class="orb"></div>
-            </div>
-          </div>
-          <div class="story-pin-list">
-            <article class="pin-item active">
-              <h3>Capture</h3>
-              <p>Customer sends a WhatsApp text, photo, or voice note. Nothing new for them to learn.</p>
-            </article>
-            <article class="pin-item">
-              <h3>Understand</h3>
-              <p>AI extracts intent, items, and fields — then flags anything that needs a human.</p>
-            </article>
-            <article class="pin-item">
-              <h3>Route</h3>
-              <p>Log to your sheet or CRM, alert the owner, and send a clear status reply.</p>
-            </article>
-            <article class="pin-item">
-              <h3>Follow through</h3>
-              <p>Reminders and next steps fire automatically so leads and orders do not stall.</p>
-            </article>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Solutions preview -->
-    <section class="story-section">
-      <div class="container">
-        <p class="section-label reveal">Solutions</p>
-        <h2 class="reveal">Start with one workflow</h2>
-        <p class="lead reveal reveal-delay-1">Pick a painful process. We pilot it with free or low-cost tools, then harden what works.</p>
-        <div class="card-grid">
-          <article class="card reveal">
-            <div class="card-icon">WHATSAPP OPS</div>
-            <h3>Auto replies &amp; logging</h3>
-            <p>Orders, FAQs, and status updates handled on WhatsApp — with a clean sheet for the owner.</p>
-          </article>
-          <article class="card reveal reveal-delay-1">
-            <div class="card-icon">DOCUMENTS</div>
-            <h3>Bills &amp; forms to structure</h3>
-            <p>Photos of invoices or forms turned into rows you can search, claim, or reconcile.</p>
-          </article>
-          <article class="card reveal reveal-delay-2">
-            <div class="card-icon">FOLLOW-UPS</div>
-            <h3>Never-drop lead loops</h3>
-            <p>Timed nudges for enquiries and unpaid balances — without hiring another person to chase.</p>
-          </article>
-        </div>
-        <div class="btn-row reveal">
-          <a class="btn btn-ghost" href="solutions.html">All solutions →</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Method -->
-    <section class="story-section band">
-      <div class="container">
-        <p class="section-label reveal">Method</p>
-        <h2 class="reveal">Discover → Pilot → Automate → Handoff</h2>
-        <p class="lead reveal reveal-delay-1">Short pilots before big builds. If it does not save time or money, we stop early.</p>
-        <div class="steps">
-          <div class="step reveal">
-            <h3>Discover</h3>
-            <p>Map one painful workflow — orders, reminders, documents, or follow-ups.</p>
-          </div>
-          <div class="step reveal reveal-delay-1">
-            <h3>Pilot</h3>
-            <p>Build a small working demo with free or low-cost tools you can try in days.</p>
-          </div>
-          <div class="step reveal reveal-delay-2">
-            <h3>Automate</h3>
-            <p>Connect WhatsApp, sheets, forms, or your existing apps into a reliable flow.</p>
-          </div>
-          <div class="step reveal reveal-delay-3">
-            <h3>Handoff</h3>
-            <p>Document, train your team, and leave you with something you can maintain.</p>
-          </div>
-        </div>
-        <div class="btn-row reveal">
-          <a class="btn btn-ghost" href="approach.html">Read the full approach →</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- CTA -->
-    <section class="story-section">
-      <div class="container">
-        <div class="cta-band reveal">
-          <h2>Ready to automate one process?</h2>
-          <p>Tell us what eats your team’s time. We will suggest a simple first automation — no pitch deck required.</p>
-          <div class="btn-row">
-            <a class="btn btn-primary" href="contact.html">Get in touch</a>
-            <a class="btn btn-secondary" href="https://wa.me/919205089044" target="_blank" rel="noopener">WhatsApp</a>
-          </div>
-        </div>
+        <p class="micro">Nexora · AI that works where you work</p>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <a class="logo" href="index.html"><span class="logo-mark" aria-hidden="true">N</span> Nexora</a>
-          <p>Systems that remove busywork — for businesses that live on WhatsApp, walk-ins, and paper.</p>
-        </div>
-        <div class="footer-col">
-          <h4>Product</h4>
-          <a href="solutions.html">Solutions</a>
-          <a href="industries.html">Industries</a>
-          <a href="approach.html">Approach</a>
-          <a href="about.html">About</a>
-        </div>
-        <div class="footer-col">
-          <h4>Contact</h4>
-          <a href="mailto:shivam123tmf@gmail.com">shivam123tmf@gmail.com</a>
-          <a href="tel:+919205089044">+91 92050 89044</a>
-          <a href="contact.html">Contact page</a>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <span>© <span id="y"></span> Nexora · Shivam Solanki</span>
-        <span>East Delhi, India · Brand — not a company registration claim</span>
-      </div>
-    </div>
+  <footer class="foot">
+    <span>© <span id="y"></span> Nexora</span>
+    <span class="foot-right">India</span>
   </footer>
-  <script src="js/main.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+  <script type="module" src="js/scene.js"></script>
+  <script type="module" src="js/main.js"></script>
 </body>
 </html>
