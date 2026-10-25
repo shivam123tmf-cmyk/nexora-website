@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact — Nexora</title>
+  <meta name="description" content="Contact Nexora for a free consult on AI and automation. Email, WhatsApp, or the on-page form — East Delhi, India.">
+  <meta name="theme-color" content="#0B1220">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="logo" href="index.html"><span class="logo-mark" aria-hidden="true">N</span> Nexora</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu">Menu</button>
+      <nav id="nav-menu" class="nav-links" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="solutions.html">Solutions</a>
+        <a href="industries.html">Industries</a>
+        <a href="approach.html">Approach</a>
+        <a href="about.html">About</a>
+        <a class="nav-cta" href="contact.html" aria-current="page">Talk to us</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <header class="page-header">
+      <div class="container">
+        <p class="section-label">Contact</p>
+        <h1>Tell us one process to fix</h1>
+        <p>No backend required — send via email or WhatsApp. We reply from East Delhi, India.</p>
+      </div>
+    </header>
+
+    <section>
+      <div class="container contact-grid">
+        <div>
+          <div class="notice" role="note">
+            This form opens your email app with a pre-filled message to <strong>shivam123tmf@gmail.com</strong>, or you can send the same details on WhatsApp. No data is stored on this website.
+          </div>
+          <form id="contact-form" class="form" action="mailto:shivam123tmf@gmail.com" method="get" enctype="text/plain">
+            <label>
+              Your name
+              <input type="text" name="name" autocomplete="name" required placeholder="Full name">
+            </label>
+            <label>
+              Email
+              <input type="email" name="email" autocomplete="email" required placeholder="you@business.com">
+            </label>
+            <label>
+              Business / centre name
+              <span class="form-hint">Optional</span>
+              <input type="text" name="business" autocomplete="organization" placeholder="Shop, clinic, coaching centre…">
+            </label>
+            <label>
+              What are you interested in?
+              <select name="interest" required>
+                <option value="" disabled selected>Select one</option>
+                <option>WhatsApp / ops automation</option>
+                <option>Document AI</option>
+                <option>Custom workflow</option>
+                <option>General consult</option>
+              </select>
+            </label>
+            <label>
+              Message
+              <textarea name="message" required placeholder="Describe the workflow that wastes the most time…"></textarea>
+            </label>
+            <div class="form-actions">
+              <button class="btn btn-primary" type="submit">Send via email</button>
+              <button class="btn btn-secondary" type="button" id="whatsapp-send">Send via WhatsApp</button>
+            </div>
+          </form>
+        </div>
+
+        <aside class="contact-card">
+          <h3>Direct channels</h3>
+          <p>Prefer to skip the form? Reach out anytime.</p>
+          <dl class="contact-meta">
+            <div>
+              <dt>Email</dt>
+              <dd><a href="mailto:shivam123tmf@gmail.com">shivam123tmf@gmail.com</a></dd>
+            </div>
+            <div>
+              <dt>Phone / WhatsApp</dt>
+              <dd><a href="https://wa.me/919205089044" target="_blank" rel="noopener">+91 92050 89044</a></dd>
+            </div>
+            <div>
+              <dt>Location</dt>
+              <dd>East Delhi, India</dd>
+            </div>
+            <div>
+              <dt>Future brand inbox</dt>
+              <dd>hello@nexora… (domain not purchased yet)</dd>
+            </div>
+          </dl>
+          <div class="btn-row">
+            <a class="btn btn-primary" href="https://wa.me/919205089044?text=Hi%20Shivam%2C%20I%27d%20like%20to%20talk%20about%20Nexora%20automation." target="_blank" rel="noopener">Open WhatsApp</a>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="logo" href="index.html"><span class="logo-mark" aria-hidden="true">N</span> Nexora</a>
+          <p>Practical AI and automation for businesses that need results, not slides.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <a href="solutions.html">Solutions</a>
+          <a href="industries.html">Industries</a>
+          <a href="approach.html">Approach</a>
+          <a href="about.html">About</a>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <a href="mailto:shivam123tmf@gmail.com">shivam123tmf@gmail.com</a>
+          <a href="tel:+919205089044">+91 92050 89044</a>
+          <a href="contact.html">Contact form</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span id="y"></span> Nexora. Built by Shivam Solanki.</span>
+        <span>Brand in India · Not a registered company claim</span>
+      </div>
+    </div>
+  </footer>
+  <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
+  <script src="js/main.js"></script>
+</body>
+</html>
